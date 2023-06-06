@@ -51,13 +51,19 @@ const Login = () => {
   return (
     <AuthLayout>
       <Meta
-        title="NextJS SaaS Boilerplate | Login"
-        description="A boilerplate for your NextJS SaaS projects."
+        title="Proficiently | Login"
+        description="IB & Consulting Prep on Demand"
       />
       <div className="flex flex-col items-center justify-center p-5 m-auto space-y-5 rounded shadow-lg md:p-10 md:w-1/3">
         <div>
           <Link href="/" className="text-4xl font-bold">
-            Nextacular
+                <div className="flex items-center cursor-pointer text-white hover:text-gray-300 transition-all">
+                  <img src="/images/logo.png" alt="Logo" className="w-8 h-8" />
+
+                  <h1 className="text-xl ml-2 mr-2 text-green-800">
+                    Proficiently
+                  </h1>
+                </div>
           </Link>
         </div>
         <div className="text-center">
@@ -76,7 +82,7 @@ const Login = () => {
             value={email}
           />
           <button
-            className="py-2 text-white bg-blue-600 rounded hover:bg-blue-500 disabled:opacity-75"
+            className="py-2 transition ease-in-out delay-150 text-white bg-green-800 rounded hover:bg-yellow-50 hover:text-green-800 disabled:opacity-75"
             disabled={status === 'loading' || !validate || isSubmitting}
             onClick={signInWithEmail}
           >

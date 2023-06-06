@@ -1,5 +1,3 @@
-import Item from './item';
-
 const Menu = ({ data, isLoading, showMenu }) => {
   return showMenu ? (
     <div className="space-y-2">
