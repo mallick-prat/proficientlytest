@@ -34,9 +34,10 @@ const Header = () => {
     <div className="flex flex-row items-center justify-between">
       <div>
         <h5 className="font-bold text-gray-800 dark:text-gray-200">
-          {data && data.user && (
-            <span>{data.user.name || data.user.email}</span>
-          )}
+          Welcome back, {data && data.user && (
+            // extract first name if available, then generate email.
+            <span>{data.user.name.split(" ")[0] || data.user.email}</span>
+          )}!
         </h5>
       </div>
       <Menu as="div" className="relative inline-block text-left">
